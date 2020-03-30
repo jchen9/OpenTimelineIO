@@ -1,0 +1,118 @@
+{
+    "OTIO_SCHEMA": "Timeline.1",
+    "metadata": {},
+    "name": "rough_cut_with_slugs",
+    "global_start_time": null,
+    "tracks": {
+        "OTIO_SCHEMA": "Stack.1",
+        "metadata": {},
+        "name": "",
+        "source_range": null,
+        "effects": [],
+        "markers": [],
+        "children": [
+            {
+                "OTIO_SCHEMA": "Track.1",
+                "metadata": {},
+                "name": "",
+                "source_range": null,
+                "effects": [],
+                "markers": [],
+                "children": [
+                    {
+                        "OTIO_SCHEMA": "Clip.1",
+                        "metadata": {
+                            "AAF": {
+                                "SourceID": "MMMurn:smpte:umid:060a2b34.01010101.01010f00.13000000.060e2b34.7f7f2a80.5e6c2d38.74002a88"
+                            }
+                        },
+                        "name": "realmedia_1",
+                        "source_range": null,
+                        "effects": [],
+                        "markers": [],
+                        "media_reference": {
+                            "OTIO_SCHEMA": "ExternalReference.1",
+                            "metadata": {},
+                            "name": "realmedia_1",
+                            "available_range": {
+                                "OTIO_SCHEMA": "TimeRange.1",
+                                "duration": {
+                                    "OTIO_SCHEMA": "RationalTime.1",
+                                    "rate": 24.0,
+                                    "value": 169.0
+                                },
+                                "start_time": {
+                                    "OTIO_SCHEMA": "RationalTime.1",
+                                    "rate": 24.0,
+                                    "value": 1382.0
+                                }
+                            },
+                            "target_url": "/some/real/path/to/realmedia_1.aaf"
+                        }
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.1",
+                        "metadata": {
+                        },
+                        "name": "[Black]",
+                        "source_range": null,
+                        "effects": [],
+                        "markers": [],
+                        "media_reference": {
+                            "OTIO_SCHEMA": "GeneratorReference.1",
+                            "metadata": {},
+                            "name": "[Black]",
+                            "available_range": {
+                                "OTIO_SCHEMA": "TimeRange.1",
+                                "duration": {
+                                    "OTIO_SCHEMA": "RationalTime.1",
+                                    "rate": 24.0,
+                                    "value": 24.0
+                                },
+                                "start_time": {
+                                    "OTIO_SCHEMA": "RationalTime.1",
+                                    "rate": 24.0,
+                                    "value": 1.0
+                                }
+                            },
+                            "generator_kind": "Slug",
+                            "parameters": {}
+                        }
+                    },
+                    {
+                        "OTIO_SCHEMA": "Clip.1",
+                        "metadata": {
+                            "AAF": {
+                                "SourceID": "urn:smpte:umid:060a2b34.01010101.01010f00.13000000.060e2b34.7f7f2a80.5e6c2cc2.47005ccf"
+                            }
+                        },
+                        "name": "realmedia_2",
+                        "source_range": null,
+                        "effects": [],
+                        "markers": [],
+                        "media_reference": {
+                            "OTIO_SCHEMA": "ExternalReference.1",
+                            "metadata": {},
+                            "name": "realmedia_2",
+                            "available_range": {
+                                "OTIO_SCHEMA": "TimeRange.1",
+                                "duration": {
+                                    "OTIO_SCHEMA": "RationalTime.1",
+                                    "rate": 24.0,
+                                    "value": 66.0
+                                },
+                                "start_time": {
+                                    "OTIO_SCHEMA": "RationalTime.1",
+                                    "rate": 24.0,
+                                    "value": 95.0
+                                }
+                            },
+                            "target_url": "/some/real/path/to/realmedia_2.aaf"
+                        }
+                    }
+                ],
+                "kind": "Video"
+            }
+        ]
+    }
+}

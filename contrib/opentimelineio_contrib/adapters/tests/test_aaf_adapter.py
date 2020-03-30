@@ -138,6 +138,10 @@ COMPOSITE_PATH = os.path.join(
     SAMPLE_DATA_DIR,
     "composite.aaf"
 )
+SLUG_OTIO_PATH = os.path.join(
+    SAMPLE_DATA_DIR,
+    "slugs.otio"
+)
 
 
 def safe_str(maybe_str):
@@ -890,6 +894,12 @@ class AAFWriterTests(unittest.TestCase):
         otio_timeline = otio.adapters.read_from_file(GAPS_OTIO_PATH)
         fd, tmp_aaf_path = tempfile.mkstemp(suffix='.aaf')
         otio.adapters.write_to_file(otio_timeline, tmp_aaf_path)
+        self._verify_aaf(tmp_aaf_path)
+
+    def test_aaf_writer_slugs(self):
+        otio_timeline = otio.adapters.read_from_file(SLUG_OTIO_PATH)
+        fd, tmp_aaf_path = tempfile.mkstemp(suffix='.aaf')
+        otio.adapters.write_to_file(otio_timeline, tmp_aaf_path, use_empty_mob_ids=True)
         self._verify_aaf(tmp_aaf_path)
 
     def test_aaf_writer_simple(self):
