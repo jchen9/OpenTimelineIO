@@ -89,19 +89,19 @@ class testSO: XCTestCase {
     func test_Marker() {
         let tr = TimeRange(startTime: RationalTime(value: 1, rate: 2),
                            duration: RationalTime(value: 4, rate: 30))
-        let m = Marker(name: "marker", markedRange: tr, color: Marker.Color.pink.rawValue)
+        let m = MMarker(name: "marker", markedRange: tr, color: MMarker.Color.pink.rawValue)
         m.metadata["abc"] = 9
         
-        let m2 = try! m.clone() as! Marker
+        let m2 = try! m.clone() as! MMarker
         XCTAssert(m2.name == "marker")
         XCTAssert(m2.metadata["abc"] == 9)
         XCTAssert(m2.markedRange == tr)
-        XCTAssert(m2.color == Marker.Color.pink.rawValue)
-        XCTAssert(Marker().color == Marker.Color.green.rawValue)
+        XCTAssert(m2.color == MMarker.Color.pink.rawValue)
+        XCTAssert(MMarker().color == MMarker.Color.green.rawValue)
     }
     
     func test_SerializableCollection() {
-        let m1 = Marker(name: "marker1")
+        let m1 = MMarker(name: "marker1")
         let c1 = Clip(name: "clip1")
         let sc = SerializableCollection(name: "sc", children: [m1, c1], metadata: [])
         sc.metadata["abc"] = 10

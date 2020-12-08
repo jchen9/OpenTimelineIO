@@ -26,7 +26,7 @@ typedef union CxxAnyValue {
 typedef struct CxxAny {
     enum {
         NONE = 0,
-        BOOL,
+        BOOL_,
         INT,
         DOUBLE,
         STRING,
